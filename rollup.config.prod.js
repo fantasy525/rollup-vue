@@ -15,6 +15,7 @@ const dependencies = pkg.dependencies || [];
 const peerDependencies = pkg.peerDependencies || [];
 const externalDeps = Object.keys(peerDependencies)
   .concat(Object.keys(dependencies))
+  .filter(id=>id!='vue')
   .join("|");
 
 export default {
@@ -28,8 +29,8 @@ export default {
      * */
 
     const reg = new RegExp(`(${externalDeps})`);
-    if (/\.vue$/.test(id)) {
-      return false;
+    if (/^vue/.test(id) ) {
+      return true;
     }
     return reg.test(id);
   },
