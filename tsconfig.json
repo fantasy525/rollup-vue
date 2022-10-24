@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ES2020",
+        "skipLibCheck": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "moduleResolution": "Node",
+        "isolatedModules": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        },
+        "types": [
+            "vite/client",
+            "node"
+        ]
+    },
+    "vueCompilerOptions": {
+        "target": 2.7
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "src/**/*.ts",
+        "examples/**/*.ts",
+        "src/index.js",
+        "src/index.js"
+    ]
+}
